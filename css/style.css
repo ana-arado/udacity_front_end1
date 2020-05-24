@@ -1,6 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
+
+
+/* Only imports Barlow Condensed */
+/*@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');*/
+
+
+/* Imports Barlow and Alegreya */
+/*@import url(https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Barlow+Condensed:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap);*/
+
+/* With Barlow and Alegreya, imports a title font */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Barlow+Condensed:ital,wght@0,300;0,600;1,300;1,600&family=Pangolin&display=swap');
+
+
 
 body{
-    font-size: 16px;
+    font-size: 18px;
+    font-family: "Alegreya Sans", sans-serif;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Pangolin', cursive;
+}
+
+
+.side-notes{
     font-family: "Barlow Condensed", sans-serif;
 }

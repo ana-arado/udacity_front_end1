@@ -1,0 +1,43 @@
+/*specific rules for the blog*/
+
+body{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10rem 2rem auto 2rem;
+    grid-template-areas: 
+    "title"
+    "aside"
+    "main"
+    "ft";                     
+}
+
+
+header{
+    grid-area: title;
+}
+
+
+aside{
+    grid-area: aside;
+}
+
+
+main{
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+footer{
+    grid-area: ft;
+}
+
+
+.post{
+    width: 20rem;
+    height: 15rem;
+    border: 1px solid #000;
+    margin: 0.5rem;
+}
