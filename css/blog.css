@@ -1,10 +1,13 @@
 /*specific rules for the blog*/
 
+
+
+
 body{
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr;
-    grid-template-rows: 10rem 2rem auto 2rem;
+    grid-template-rows: minmax(10rem, auto) 2rem auto 2rem;
     grid-template-areas: 
     "title"
     "aside"
@@ -15,11 +18,29 @@ body{
 
 header{
     grid-area: title;
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+
+
+header h1{
+   /* width: 100%; */
+}
+
+
+.about{
+    align-self: flex-end;
 }
 
 
 aside{
     grid-area: aside;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 
@@ -27,6 +48,7 @@ main{
     grid-area: main;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 
@@ -35,9 +57,64 @@ footer{
 }
 
 
+
+
+aside a{
+    text-decoration: none;
+    background-color: #e4e4e4;
+    color: #000;
+}
+
+
+/* .home{
+    background-color: #333;
+    color: #e4e4e4;
+} */
+
+
+aside a,
+.home{    
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    font-family: "Alegreya SC", sans-serif;
+}
+
+
+aside a:hover{
+    font-weight: 600;
+    background-color: #b7adcf;
+}
+
+
 .post{
     width: 20rem;
-    height: 15rem;
-    border: 1px solid #000;
+    height: 25rem;
+    background-color: #e4e4e4;
+    /*border: 1px solid #000;*/
     margin: 0.5rem;
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+
+
+.post-image{
+    height: 7rem;
+    background: #b7adcf url(https://cdn.windowsreport.com/wp-content/uploads/2017/08/typewriter-e1503133973255.jpg) no-repeat center;
+    margin: 0.5rem -1rem 0 -1rem;
+}
+
+
+img{
+    height: 7rem;
+}
+
+
+.details{
+    font: 0.6rem;
+    margin: 0;
+    font-weight: 300;
 }
