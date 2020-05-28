@@ -7,40 +7,49 @@ body{
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(10rem, auto) 2rem auto 2rem;
+    grid-template-rows: minmax(10rem, auto) repeat(3, auto);
     grid-template-areas: 
-    "title"
-    "aside"
-    "main"
-    "ft";                     
+        "title"
+        "aside"
+        "main"
+        "ft";                     
 }
 
+@media (min-width:800px){
+    body{
+        grid-template-areas:
+            "title title"
+            "aside main"
+            "ft ft";
+        grid-template-columns: 12rem auto;
+        grid-template-rows: minmax(10rem, auto) repeat(2, auto);
+    }
+}
 
 header{
     grid-area: title;
-    border: 1px solid #000;
     display: flex;
     flex-direction: column;
     padding: 1rem;
+    border-bottom: 1px solid #b7adcf;
 }
-
-
-
-header h1{
-   /* width: 100%; */
-}
-
 
 .about{
-    align-self: flex-end;
+    margin: 0;
 }
 
-
-aside{
+nav{
     grid-area: aside;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
+}
+
+@media (min-width:800px){
+    nav{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
 }
 
 
@@ -56,48 +65,51 @@ footer{
     grid-area: ft;
 }
 
-
-
-
-aside a{
+a{
     text-decoration: none;
-    background-color: #e4e4e4;
-    color: #000;
+    color: #333;
 }
 
-
-/* .home{
-    background-color: #333;
-    color: #e4e4e4;
-} */
-
-
-aside a,
-.home{    
-    font-weight: 500;
-    font-size: 1.2rem;
-    padding: 0.4rem;
-    font-family: "Alegreya SC", sans-serif;
+.button{   
+    margin: 0.3rem 0.2rem;
+    font: 400 1.2rem/1 "Alegreya Sans", sans-serif;
+    padding: 0.4rem 3rem;
+    min-width: max-content;
+    flex: 1;
+    text-align: center;
+    transition: transform 0.4s;
 }
 
+@media (min-width:800px){
+    .button{
+        flex: unset;
+    }
+}
 
-aside a:hover{
+.button:not(.active):hover{
     font-weight: 600;
     background-color: #b7adcf;
+    border: 2px solid #b7acdf;
+    transform: scale(1.02);
 }
 
+.sub{
+    color: #b7adcf;
+
+}
 
 .post{
-    width: 20rem;
+    min-width: 14rem;
+    flex-basis: 16rem;
+    flex: 1;
     height: 25rem;
-    background-color: #e4e4e4;
-    /*border: 1px solid #000;*/
     margin: 0.5rem;
     text-decoration: none;
     color: #000;
     display: flex;
     flex-direction: column;
-    padding: 0 1rem;
+    padding: 1rem;
+    box-shadow: 0.1rem 0.1rem 0.5rem 0.2rem rgba(214, 214, 214, 0.5);
 }
 
 
@@ -107,14 +119,14 @@ aside a:hover{
     margin: 0.5rem -1rem 0 -1rem;
 }
 
-
-img{
-    height: 7rem;
-}
-
-
 .details{
     font: 0.6rem;
     margin: 0;
     font-weight: 300;
+}
+
+footer{
+    background-color: #e4e4e4;
+    color: #000;
+    padding: 1rem 1rem 2rem 1rem;
 }
