@@ -1,0 +1,65 @@
+article{
+    grid-area: main;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(5 auto);
+    grid-template-areas:
+        "info"
+        "author"
+        "first-p"
+        "fig"
+        "text";
+}
+
+@media (min-width: 800px){
+    article{
+        grid-template-columns: auto 8rem;
+        grid-template-rows: repeat(4 auto);
+        grid-template-areas:
+          "info author"
+            "first-p author"
+            "fig fig"
+            "text text";
+        
+    }
+}
+
+figure{
+    grid-area: fig;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    box-shadow: 0.1rem 0.1rem 0.5rem 0.2rem rgba(214, 214, 214, 0.5);
+    width: 70%;
+}
+
+.post-info{
+    grid-area: info;
+}
+
+img{
+    width: 100%;
+}
+
+.avatar{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    border: 2px solid #333;
+    background-color: #e4e4e4;
+    margin: 1rem;
+    align-self: center;
+}
+
+.author-info{
+    grid-area: author;
+}
+
+.text{
+    grid-area: text;
+}
+
+article p:first-of-type{
+    grid-area: first-p;
+}
