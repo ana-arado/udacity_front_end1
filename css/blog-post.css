@@ -1,9 +1,13 @@
-article{
+/* Importing the rules from style.css */
+@import "style.css";
+
+/* Specific rules for the blog post */
+article {
     grid-area: main;
     display: grid;
     gap: 1rem;
     grid-template-columns: auto;
-    grid-template-rows: repeat(5 auto);
+    grid-template-rows: repeat(5, auto);
     grid-template-areas:
         "info"
         "author"
@@ -12,20 +16,19 @@ article{
         "text";
 }
 
-@media (min-width: 800px){
-    article{
-        grid-template-columns: auto 8rem;
-        grid-template-rows: repeat(4 auto);
+@media (min-width: 800px) {
+    article {
+        grid-template-columns: minmax(0, auto) minmax(min-content, 8rem);
+        grid-template-rows: repeat(4, auto);
         grid-template-areas:
-          "info author"
+            "info author"
             "first-p author"
             "fig fig"
             "text text";
-        
     }
 }
 
-figure{
+figure {
     grid-area: fig;
     align-items: center;
     flex-direction: column;
@@ -34,15 +37,15 @@ figure{
     width: 70%;
 }
 
-.post-info{
+.post-info {
     grid-area: info;
 }
 
-img{
+img {
     width: 100%;
 }
 
-.avatar{
+.avatar {
     height: 5rem;
     width: 5rem;
     border-radius: 50%;
@@ -52,14 +55,25 @@ img{
     align-self: center;
 }
 
-.author-info{
+.author-info {
     grid-area: author;
 }
 
-.text{
+.text {
     grid-area: text;
 }
 
-article p:first-of-type{
+.first-p {
     grid-area: first-p;
+}
+
+.social-media {
+    width: 1rem;
+    margin-right: 0.3rem;
+}
+
+.share {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }

@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog template</title>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/blog.css" rel= "stylesheet">
-  </head>
-  <body>
-    <header>
-      <h1>Blog Title</h1>
-      <p class= "about side-notes">This blog is about... Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam dignissimos itaque, est esse error ...</p>
-    </header>
-    <nav>
-      <div class= "active button button1">Home</div>
-      <a class= "button button2" href= "style-guide.html">Style Guide</a>
-      <a class= "button button2" href= "#">Link2</a>
-      <button class ="button subscribe" type= "button">Subscribe</buttton>
-    </nav>
-    <main>
-      <!-- Cards -->
-      <a href="blog-post.html" class= "post">
-        <h2>Blog post example</h2>
-        <time class= "details">May 26 2020</time>
-        <p class= "details">Author's name</p>
-        <div class= "post-image"></div>
-        <p>This links to the template for the blog post.</p>
-      </a>
-      <a href="blog-post.html" class= "post">Blog post</a>
-      <a href="blog-post.html" class= "post">Blog post</a>
-      <a href="blog-post.html" class= "post">Blog post</a>
-      <a href="blog-post.html" class= "post">Blog post</a>
-      <a href="blog-post.html" class= "post">Blog post</a>
-    </main>
-    <footer>Made by Ana Carolina Arado Oliveira for the Udacidy Front End Nanodegree.</footer>
-  </body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog template</title>
+        <!-- I opted to import the general css into the page-specific css. -->
+        <link href="css/blog.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <h1>Blog Title</h1>
+            <p class="about side-notes">This blog is about... Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam dignissimos itaque, est esse error ...</p>
+        </header>
+
+        <nav>
+            <div class="active button active-nav">Home</div>
+            <a class="button button-main" href="style-guide.html">Style Guide</a>
+            <a class="button button-main" href="#">Link2</a>
+            <button class="button subscribe" type="button">Subscribe</buttton>
+        </nav>
+
+        <main>
+        <!-- Cards -->
+            <a href="blog-post.html" class="post">
+                <h2>Blog post example</h2>
+                <time class="details">May 26 2020</time>
+                <p class="details">Author's name</p>
+                <div class="post-image"></div>
+                <p>This links to the template for the blog post.</p>
+            </a>
+
+            <a href="blog-post.html" class="post">Blog post</a>
+            <a href="blog-post.html" class="post">Blog post</a>
+            <a href="blog-post.html" class="post">Blog post</a>
+            <a href="blog-post.html" class="post">Blog post</a>
+            <a href="blog-post.html" class="post">Blog post</a>
+        </main>
+
+        <footer>Made by Ana Carolina Arado Oliveira for the Udacidy Front End Nanodegree.</footer>
+    </body>
 </html>

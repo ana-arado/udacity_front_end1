@@ -1,6 +1,8 @@
-/*specific rules for the blog*/
+/* Importing the rules from style.css */
+@import "style.css";
 
-.post{
+/*Specific rules for the blog Homepage*/
+.post {
     min-width: 14rem;
     flex-basis: 16rem;
     flex: 1;
@@ -14,14 +16,13 @@
     box-shadow: 0.1rem 0.1rem 0.5rem 0.2rem rgba(214, 214, 214, 0.5);
 }
 
-
-.post-image{
+.post-image {
     height: 7rem;
     background: #b7adcf url(https://cdn.windowsreport.com/wp-content/uploads/2017/08/typewriter-e1503133973255.jpg) no-repeat center;
     margin: 0.5rem -1rem 0 -1rem;
 }
 
-.details{
+.details {
     font: 0.6rem;
     margin: 0;
     font-weight: 300;

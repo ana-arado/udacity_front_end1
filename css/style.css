@@ -1,30 +1,30 @@
-
 /*General rules for all the html*/
 
+/* Imported the font in the css because it is not part of the content but a style choice. */
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@500;700&family=Alegreya+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 /*reset*/
 body,
-html{
+html {
     padding:0;
     margin:0;
 }
 
 /* Shared Structure */
-body{
+body {
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr;
     grid-template-rows: minmax(10rem, auto) repeat(3, auto);
-    grid-template-areas: 
+    grid-template-areas:
         "title"
         "aside"
         "main"
-        "ft";                     
-}
+        "ft";
+    }
 
-@media (min-width:800px){
-    body{
+@media (min-width:800px) {
+    body {
         grid-template-areas:
             "title title"
             "aside main"
@@ -34,7 +34,7 @@ body{
     }
 }
 
-header{
+header {
     grid-area: title;
     display: flex;
     flex-direction: column;
@@ -42,49 +42,55 @@ header{
     border-bottom: 1px solid #b7adcf;
 }
 
-.about{
+.about {
     margin: 0;
 }
 
-
-nav{
+nav {
     grid-area: aside;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-@media (min-width:800px){
-    nav{
+@media (min-width:800px) {
+    nav {
         flex-direction: column;
         justify-content: flex-start;
     }
 }
 
-main{
+main {
     grid-area: main;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-blockquote{
-    font: italic 400 1rem "Alegreya Sans", sans-serif;
+blockquote {
+    border-left: 2px solid #e4e4e4;
+    padding-left: 2rem;
+    margin-left: 0;
 }
 
-footer{
+.quote {
+    font: 400 1rem "Alegreya Sans", sans-serif;
+    color: #000;
+}
+
+footer {
     background-color: #e4e4e4;
     color: #000;
     grid-area: ft;
     padding: 1rem 1rem 2rem 1rem;
 }
 
-a{
-    text-decoration: none;
-    color: #333;
+a {
+    color: #b7acdf;
+    font: 700 1rem "Alegreya Sans", sans-serif;
 }
 
-.button{   
+.button {
     margin: 0.3rem 0.2rem;
     font: 400 1.2rem/1 "Alegreya Sans", sans-serif;
     padding: 0.4rem 3rem;
@@ -92,62 +98,30 @@ a{
     flex: 1;
     text-align: center;
     transition: transform 0.4s;
+    text-decoration: none;
 }
 
-@media (min-width:800px){
-    .button{
+@media (min-width:800px) {
+    .button {
         flex: unset;
     }
 }
 
-.button:not(.active):hover{
+.button:not(.active):hover {
     font-weight: 600;
     background-color: #b7adcf;
     border: 2px solid #b7acdf;
     transform: scale(1.02);
 }
 
-.sub{
+.sub {
     color: #b7adcf;
-
 }
 
-
-
-
-
-
-
-
-
-body{
+body {
     padding: 0 10vw;
     font-size: 16px;
     font-family: "Alegreya Sans", sans-serif;
-}
-
-h1{
-    font-size: 2rem;
-}
-
-h2{
-    font-size: 1.3rem;
-}
-
-h3{
-    font-size: 1.2rem;
-}
-
-h4{
-    font-size: 1.1rem
-}
-
-h5{
-    font-size: 1.05rem;
-}
-
-h6{
-    font-size: 1rem;
 }
 
 h1,
@@ -155,25 +129,53 @@ h2,
 h3,
 h4,
 h5,
-h6{
-    font-weight: 500;
-    font-family: "Alegreya SC", serif;
+h6 {
+    font: 500 2rem "Alegreya SC", sans-serif;
     color: #333;
 }
 
-.side-notes{
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.35rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1.1rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+p {
+    font: 400 1rem/1.5 "Alegreya Sans", sans-serif;
+    color: #333;
+}
+
+.side-notes {
     font-weight: 300;
 }
 
-strong{
+strong {
     font-weight: 700;
 }
 
-em{
+em {
     font-style: italic;
 }
 
-button{
+.und {
+    text-decoration: underline;
+}
+
+button {
     border: none;
     font: 400 1.2rem/1.3 "Alegreya Sans", sans-serif;
     padding: 0.4rem 4rem;
@@ -181,25 +183,24 @@ button{
     margin: 0.35rem;
 }
 
-button:hover{
+button:hover {
     background-color: #b7adcf;
     font-weight: 700;
     color: #333;
     border: 2px solid #b7acdf;
 }
 
-.button1{
+.active-nav {
     border: 2px solid #e4e4e4;
     background-color: #e4e4e4;
 }
 
-
-.button2{
+.button-main{
     color: #6f686d;
     border: 2px solid #6f686d;
 }
 
-.subscribe{
+.subscribe {
     color: #b7adcf;
     border: 2px solid #b7adcf;
 }

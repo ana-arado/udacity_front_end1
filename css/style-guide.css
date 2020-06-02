@@ -1,50 +1,51 @@
-/*Specific rules for the style guide */
+/* Importing the rules from style.css */
+@import "style.css";
 
-main{
+/*Specific rules for the style guide */
+main {
     display: block;
 }
 
 /*Colors*/
-.color-container{
+.color-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.color{
+.color {
     display: flex;
     width: 5rem;
     height: 5rem;
     border: 0.1rem solid #000;
     border-radius: 50%;
-    margin: 1em;
+    margin: 1rem;
     justify-content: center;
     align-items: center;
 }
 
-.first{
+.first {
     background-color: #000;
     color: #fff;
-
 }
 
-.second{
+.second {
     background-color: #333;
     color: #fff;
 }
 
-.third{
+.third {
     background-color: #6f686d;
 }
 
-.fourth{
+.fourth {
     background-color: #b7adcf;
 }
 
-.fifth{
+.fifth {
     background-color: #fff;
 }
 
-.sixth{
+.sixth {
     background-color:#e4e4e4;
 }
