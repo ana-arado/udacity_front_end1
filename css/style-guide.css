@@ -1,9 +1,12 @@
-/* Importing the rules from style.css */
-@import "style.css";
-
 /*Specific rules for the style guide */
-main {
+.main-style-guide {
     display: block;
+}
+
+.buttons-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /*Colors*/

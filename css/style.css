@@ -1,3 +1,8 @@
+/* Importing the other css files specific to each html.*/
+@import "blog.css";
+@import "blog-post.css";
+@import "style-guide.css";
+
 /*General rules for all the html*/
 
 /* Imported the font in the css because it is not part of the content but a style choice. */
@@ -99,6 +104,7 @@ a {
     text-align: center;
     transition: transform 0.4s;
     text-decoration: none;
+    cursor: default;
 }
 
 @media (min-width:800px) {
